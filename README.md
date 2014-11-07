@@ -19,11 +19,11 @@ $ = require('gulp-load-plugins')()
 // optimize
 gulp.task 'optimize', function() {
 
-  jsFilter     = $.filter('.tmp/**/*.js');
-  cssFilter    = $.filter('.tmp/**/*.css');
+  jsFilter     = $.filter('src/**/*.js');
+  cssFilter    = $.filter('src/**/*.css');
   userefFilter = $.useref.assets();
 
-  gulp.src('src/index.html', {base: '.tmp'})
+  gulp.src('src/index.html', {base: 'src'})
     .pipe(userefFilter)
     .pipe(jsFilter)
     .pipe($.uglify())
