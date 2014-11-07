@@ -22,6 +22,9 @@ module.exports = ->
     if oPathSplit.length > 1
       oPath = oPathSplit[1]
 
+    else
+      console.log 'no base', file.base, oPathSplit
+
     if nPathSplit.length > 1
       nPath = nPathSplit[1]
 
@@ -33,12 +36,10 @@ module.exports = ->
     cb()
   ), ((cb) ->
     patterns = patterns.filter((item) -> typeof(item) == 'object')
+    console.log 'patterns', patterns
     files.forEach (file) ->
       try
-        if Array.isArray(opts)
-          file.contents = new Buffer(frep.strWithArr(String(file.contents), patterns))
-        else
-          file.contents = new Buffer(frep.strWithObj(String(file.contents), patterns))
+        file.contents = new Buffer(frep.strWithArr(String(file.contents), patterns))
       catch err
         console.warn('Error caught from frep: ' + err.message + '.')
     cb()
