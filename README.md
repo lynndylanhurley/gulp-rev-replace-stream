@@ -40,11 +40,6 @@ gulp.task 'optimize', function() {
     .pipe($.size())
 }
 
-gulp.src("./src/*.ext")
-	.pipe(rev-replace-stream({
-		msg: "Hello Gulp!"
-	}))
-	.pipe(gulp.dest("./dist"));
 ```
 
 ## API
