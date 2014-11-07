@@ -1,5 +1,5 @@
 # gulp-rev-replace-stream
-[![NPM version][https://badge.fury.io/js/gulp-rev-replace-stream.png]][https://npmjs.org/package/gulp-rev-replace-stream]
+[![NPM version][https://badge.fury.io/js/gulp-rev-replace-stream.png][https://npmjs.org/package/gulp-rev-replace-stream]
 
 > rev-replace-stream plugin for [gulp](https://github.com/wearefractal/gulp)
 
