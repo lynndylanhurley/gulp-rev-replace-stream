@@ -1,6 +1,6 @@
 {
   "name": "gulp-rev-replace-stream",
-  "version": "0.0.1-alpha3",
+  "version": "0.0.1-alpha4",
   "description": "A plugin for Gulp",
   "keywords": [
     "gulpplugin"

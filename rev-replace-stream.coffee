@@ -7,7 +7,10 @@ module.exports = ->
 
   through.obj(((file, enc, cb) ->
     this.push(file)
-    files.push(file)
+
+    # only text based files should be parsed for str replace
+    unless /.(jpg|png|gif|eot|svg|ttf|woff)/.test(file.path)
+      files.push(file)
 
     oPath = file.revOrigPath
     nPath = file.path
